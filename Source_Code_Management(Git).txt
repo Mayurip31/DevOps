@@ -1,0 +1,109 @@
+    Step 1: Launch Ubuntu Instance on Aws
+    ___________________________________________________________________
+    
+    Step 2: Take the access of that instance (via ssh)
+    ___________________________________________________________________
+
+    Step 3: Install git on machine
+  
+              # sudo -i (root)
+              #apt install git -y 
+    ___________________________________________________________________
+
+    Setp 4: Go to the github webpage and sign in if you already hav an 
+            account,otherwise create new account and sign in.
+          
+            ## Click on NEW --> create repository --> Name --> public 
+            
+               --> add README.md --> create repository(eg. DevOps) 
+    ___________________________________________________________________
+    
+    Step 5: create one directory to initialize git enviroment
+     
+              # mkdir Directory_name (e.g mkdir Github_Env)
+    ___________________________________________________________________
+   
+    Step 6: After that jump on created directory
+            
+              # cd Directory_name  (eg. cd Github_Env)
+     ___________________________________________________________________  
+
+    Step 7: Initialize git enviroment to directory created 
+      
+             # git init
+     ___________________________________________________________________
+
+    Step 8: Add user name and email to git configuration
+
+            # git config --global user.name "<Enter Name>"
+
+            # git config --global user.email "<Enter email>"  
+   ___________________________________________________________________
+
+   Step 9: Create ssh keys to add on github loacal server 
+
+           #cd
+
+           # ssh-keygen
+
+           ## go to .ssh file
+
+           #  cd .ssh
+           
+           #  cat id_rsa.pub
+ 
+           ## Copy the key and add ssh key on github 
+   
+           ### Github --> settings --> ssh keys --> add new
+   ________________________________________________________________________
+    
+   Step 10: Go to the created directory on Machine
+         
+          ## Add origin 
+
+          # git remote add origin <ssh_url>
+
+          # git remote -v
+   ________________________________________________________________________
+  
+   Step 11: Clone remote repository to local server
+
+         #git clone <repo_url>
+
+   ________________________________________________________________________
+
+   Step 12: After Cloning we get the repository of remote server (DevOps)
+
+        # change the directory
+
+        # cd <remote _server_directory_name> (DevOps)
+   
+        ## create file 
+
+        # echo "Hello Welcome to Cloud World" > file.txt
+   ________________________________________________________________________
+
+    Step 13: Commands
+
+        ## Check the status of file, it shows file is in untracked condition(red colour)  
+
+          # git status
+   
+        ## Add file in git
+         
+          # git add file.txt
+      
+        ## comment or message
+       
+          # git commit -m "First File"
+          
+        ## pushing file in main origin
+
+           # git push origin main
+
+        ## For updated changes 
+
+           # git pull origin main
+
+       ## After that file is uploaded on remote server
+    ________________________________________________________________________
